@@ -1,4 +1,5 @@
 img {
+<<<<<<< HEAD
   max-width: 100%;
 }
 .hidden {
@@ -186,3 +187,52 @@ img {
   border-radius: 5px;
   cursor: pointer;
 }
+=======
+    max-width: 100%;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .img-upload__overlay {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.192);
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+  }
+  .image-edit{
+    width: 800px;
+    position: relative;
+  }
+  .krestik{
+ 
+    background-color: aqua;
+    position: absolute;
+    right: -100px;
+  }
+  .image-effects {
+    display: flex;
+    justify-content: space-around;
+  }
+  .effect-col {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .sepia {
+    filter: grayscale(100%) sepia(1);
+  }
+  
+  .black-white {
+    filter: grayscale(100%);
+  }
+  .invert {
+    filter: invert(100%);
+  }
+  .brightness {
+    filter: brightness(150%);
+  }
+  
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb

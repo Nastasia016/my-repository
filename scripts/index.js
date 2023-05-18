@@ -2,6 +2,7 @@ const fileInput = document.getElementById("upload-file");
 const previewImage = document.getElementById("img-edit-form");
 const imageBlock = document.getElementById("image-block");
 const imageEffects = document.getElementById("image-effects");
+<<<<<<< HEAD
 const submitForm = document.getElementById("form-img");
 const imageDescription = document.getElementById("description-input");
 const submitButton = document.getElementById("submit-button");
@@ -39,6 +40,10 @@ crossBtn.addEventListener("click", () => {
 fileInput.addEventListener("change", () => {
   imageBlock.innerHTML = "";
   imageEffects.innerHTML = "";
+=======
+
+fileInput.addEventListener("change", () => {
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
   const file = fileInput.files[0];
   const reader = new FileReader();
 
@@ -48,11 +53,15 @@ fileInput.addEventListener("change", () => {
     body.classList.add("modal-open");
 
     const newImage = document.createElement("img");
+<<<<<<< HEAD
     newImage.id = "original-image";
+=======
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
     newImage.src = reader.result;
     newImage.alt = " image";
     imageBlock.appendChild(newImage);
 
+<<<<<<< HEAD
     const inputRange = document.createElement("input");
     inputRange.id = "input-range";
     inputRange.type = "range";
@@ -94,6 +103,8 @@ fileInput.addEventListener("change", () => {
     });
     zoomBlock.appendChild(plusBtn);
     imageBlock.appendChild(zoomBlock);
+=======
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
     // Original effect >>>
     const effectBlock = document.createElement("div");
     imageEffects.appendChild(effectBlock);
@@ -107,6 +118,7 @@ fileInput.addEventListener("change", () => {
     const text = document.createElement("p");
     text.textContent = "Оригинал";
     effectBlock.appendChild(text);
+<<<<<<< HEAD
     effectBlock.addEventListener("click", () => {
       newImage.classList.remove(
         "sepia",
@@ -115,6 +127,11 @@ fileInput.addEventListener("change", () => {
         "filter-fobos"
       );
     });
+=======
+    effectBlock.addEventListener('click', () =>{
+      newImage.classList.remove("sepia", "black-white", "invert", "brightness");
+    })
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
     //<< Original effect
 
     const effectSepia = document.createElement("div");
@@ -122,7 +139,12 @@ fileInput.addEventListener("change", () => {
     effectSepia.classList.add("effect-col");
 
     const sepiaImage = document.createElement("img");
+<<<<<<< HEAD
 
+=======
+    console.log(reader.result);
+    console.log(1);
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
     sepiaImage.src = reader.result;
     sepiaImage.alt = " image";
     sepiaImage.classList.add("sepia");
@@ -134,7 +156,11 @@ fileInput.addEventListener("change", () => {
 
     // Add event listener to the sepia effect block
     effectSepia.addEventListener("click", () => {
+<<<<<<< HEAD
       newImage.classList.remove("black-white", "invert", "filter-fobos");
+=======
+      newImage.classList.remove("black-white", "invert", "brightness");
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
 
       newImage.classList.add("sepia");
     });
@@ -145,19 +171,32 @@ fileInput.addEventListener("change", () => {
     effectBW.classList.add("effect-col");
 
     const bwImage = document.createElement("img");
+<<<<<<< HEAD
 
+=======
+    console.log(reader.result);
+    console.log(1);
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
     bwImage.src = reader.result;
     bwImage.alt = " image";
     bwImage.classList.add("black-white");
 
     effectBW.appendChild(bwImage);
     const bwText = document.createElement("p");
+<<<<<<< HEAD
     bwText.textContent = "Хром";
+=======
+    bwText.textContent = "Черно-белое";
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
     effectBW.appendChild(bwText);
 
     // Add event listener to the black and white effect block
     effectBW.addEventListener("click", () => {
+<<<<<<< HEAD
       newImage.classList.remove("sepia", "invert", "filter-fobos");
+=======
+      newImage.classList.remove("sepia","invert", "brightness");
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
 
       newImage.classList.add("black-white");
     });
@@ -174,12 +213,20 @@ fileInput.addEventListener("change", () => {
 
     effectInvert.appendChild(invertImage);
     const invertText = document.createElement("p");
+<<<<<<< HEAD
     invertText.textContent = "Марвин";
+=======
+    invertText.textContent = "Инвертировать";
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
     effectInvert.appendChild(invertText);
 
     // Add event listener to the inverted colors effect block
     effectInvert.addEventListener("click", () => {
+<<<<<<< HEAD
       newImage.classList.remove("sepia", "black-white", "filter-fobos");
+=======
+      newImage.classList.remove("sepia", "black-white", "brightness");
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
 
       newImage.classList.add("invert");
     });
@@ -192,23 +239,36 @@ fileInput.addEventListener("change", () => {
     const brightnessImage = document.createElement("img");
     brightnessImage.src = reader.result;
     brightnessImage.alt = " image";
+<<<<<<< HEAD
     brightnessImage.classList.add("filter-fobos");
 
     effectBrightness.appendChild(brightnessImage);
     const brightnessText = document.createElement("p");
     brightnessText.textContent = "Блюр";
+=======
+    brightnessImage.classList.add("brightness");
+
+    effectBrightness.appendChild(brightnessImage);
+    const brightnessText = document.createElement("p");
+    brightnessText.textContent = "Яркость";
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
     effectBrightness.appendChild(brightnessText);
 
     // Add event listener to the brightness effect block
     effectBrightness.addEventListener("click", () => {
       newImage.classList.remove("sepia", "black-white", "invert");
 
+<<<<<<< HEAD
       newImage.classList.add("filter-fobos");
+=======
+      newImage.classList.add("brightness");
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
     });
   });
 
   reader.readAsDataURL(file);
 });
+<<<<<<< HEAD
 function validateDescription() {
   const description = imageDescription.value.trim();
   return description.length >= 20 && description.length <= 140;
@@ -352,3 +412,9 @@ document.addEventListener("click", (evt) => {
 });
 
 successTemplate.style.display = "none";
+=======
+
+
+originalImage.addEventListener("click", () => {
+  });
+>>>>>>> 773471f5bf8a57562ba845a8a4829989cc137cbb
