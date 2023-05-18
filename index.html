@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <form class="img-upload">
+    <label for="upload-file" class="upload-label">
+      <span>Загрузить изображение</span>
+    </label>
+    <input type="file" name="upload-file" id="upload-file" />
+  </form>
+  <div id="img-container"></div>
+  <div id="img-edit-form" class="img-upload__overlay hidden">
+    <form id="form-img" class="image-edit">
+      <span class="cross" id="cross">
+        <span class="cross-icon"></span>
+      </span>
+      <div id="image-block"></div>
+      <div class="image-effects" id="image-effects"></div>
+      <textarea id="description-input" name="description" placeholder="Enter description" cols="30"
+        rows="10"></textarea>
+      <button id="submit-button" type="submit">Send</button>
+    </form>
+  </div>
+  <div id="error-template">
+    <div id="error" class="error">
+      <p class="error__message">Произошла ошибка при отправке данных.</p>
+      <button id="errorButton" class="error__button">Ок</button>
+    </div>
+  </div>
+  <div id="success-template">
+    <div id="success" class="success">
+      <p class="success__message">Данные успешно отправлены.</p>
+      <button id="successButton" class="success__button">Ок</button>
+    </div>
+  </div>
+
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>
